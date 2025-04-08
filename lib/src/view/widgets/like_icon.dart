@@ -21,12 +21,12 @@ class LikeIconState extends State<LikeIcon> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onLike,
       child: Icon(
         like ? Remix.heart_fill : Remix.heart_line,
         color: like ? Colors.red : Colors.black,
         size: 40,
       ),
-      onTap: onLike,
     );
   }
 }

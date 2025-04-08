@@ -17,8 +17,8 @@ class PostView extends StatelessWidget {
           padding: const EdgeInsets.all(15),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 15),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,11 +54,11 @@ class PostView extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 15),
                 child: GestureDetector(
                   onDoubleTap: () => {globalKey.currentState?.onLike()},
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image(
+                      child: const Image(
                         fit: BoxFit.cover,
                         image: NetworkImage(
                             "https://pbs.twimg.com/profile_images/1743183985885503488/gewY1tJw_400x400.jpg"),
@@ -75,21 +75,21 @@ class PostView extends StatelessWidget {
                     Row(
                       children: [
                         LikeIcon(globalKey),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        CommentIcon(),
-                        SizedBox(
+                        const CommentIcon(),
+                        const SizedBox(
                           width: 8,
                         ),
-                        ShareIcon(),
+                        const ShareIcon(),
                       ],
                     ),
-                    BookmarkIcon()
+                    const BookmarkIcon()
                   ],
                 ),
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -99,7 +99,7 @@ class PostView extends StatelessWidget {
                   SizedBox(),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     "dummy_user ",

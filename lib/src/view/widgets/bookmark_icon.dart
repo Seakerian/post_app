@@ -20,11 +20,11 @@ class _BookmarkIconState extends State<BookmarkIcon> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onLike,
       child: Icon(
         like ? Remix.bookmark_fill : Remix.bookmark_line,
         size: 40,
       ),
-      onTap: onLike,
     );
   }
 }

@@ -12,7 +12,7 @@ class CommentBoxBloc extends Bloc<CommentBoxEvent, CommentBoxState> {
     on<OnChangeComment>(
       (event, emit) {
         emit(
-          CommentBoxState().copyWith(SelfComment: event.comment),
+          const CommentBoxState().copyWith(SelfComment: event.comment),
         );
       },
     );
@@ -20,7 +20,7 @@ class CommentBoxBloc extends Bloc<CommentBoxEvent, CommentBoxState> {
       (event, emit) {
         var list = services.getCommentList();
         emit(
-          CommentBoxState().copyWith(CommentList: list),
+          const CommentBoxState().copyWith(CommentList: list),
         );
       },
     );

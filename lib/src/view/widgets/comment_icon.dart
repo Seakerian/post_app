@@ -21,7 +21,7 @@ class _CommentIconState extends State<CommentIcon> {
           BlocProvider.of<CommentBoxBloc>(context).add(
             LoadCommentList(),
           );
-          return Container(
+          return SizedBox(
             height: 200,
             child: RawScrollbar(
               child: ListView.builder(
